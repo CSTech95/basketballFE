@@ -22,7 +22,7 @@ export function Footer() {
     <div className="flex items-end flex-row-reverse justify-between h-40  bg-black  w-full ">
       <img
         src="https://cdn.nba.com/logos/leagues/logo-nba.svg"
-        className=" h-[30px] mb-10 mr-10"
+        className=" h-[30px] mb-6 mr-6"
       />
     </div>
   )
