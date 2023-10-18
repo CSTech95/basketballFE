@@ -6,7 +6,7 @@ const StatFeature = ({ game }) => {
   let theDate = moment(game.date).format("MMMM Do YYYY, h:mm:ss a")
   //  theDate = theDate.toISOString()
   return (
-    <div className="grid p-2 border rounded bg-gradient-to-r from-sky-100 to-cyan-50 border-black text-xs bg-amber-100 font-mono font-bold text-center">
+    <div className="grid p-2 border rounded bg-gradient-to-r from-sky-100 to-cyan-50 border-black text-xs bg-amber-100 font-mono font-bold text-center m-1">
       <h3 className="">{theDate}</h3>
       <div className="flex flex-row gap-4 w-44 pt-4 font-bold">
         <div className="">
