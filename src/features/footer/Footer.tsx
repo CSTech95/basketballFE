@@ -19,10 +19,10 @@ export function Footer() {
   const incrementValue = Number(incrementAmount) || 0
 
   return (
-    <div className="flex flex-row-reverse justify-between h-[75px]  bg-black  w-full ">
+    <div className="flex items-end flex-row-reverse justify-between h-40  bg-black  w-full ">
       <img
         src="https://cdn.nba.com/logos/leagues/logo-nba.svg"
-        className="flex align-center items-center px-4 h-[30px]"
+        className=" h-[30px] mb-10 mr-10"
       />
     </div>
   )
