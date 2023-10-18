@@ -19,7 +19,7 @@ const StatFeatures = () => {
   console.log(data)
 
   return (
-    <div className="grid p-2 border text-xs bg-amber-100 font-mono font-bold text-center">
+    <div className="grid p-2 border text-xs  font-mono font-bold text-center">
       <p className="text-white">Reached</p>
     </div>
   )
