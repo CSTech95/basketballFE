@@ -46,8 +46,8 @@ export function QueryGames() {
   if (error) return "An error has occurred: " + error
 
   return (
-    <div className="flex flex-col">
-      <div className="grid grid-cols-3 text-white shadow-xl bg-slate-800 p-4">
+    <div className="flex flex-col items-center my-4">
+      <div className="grid grid-cols-1 h-80 overflow-y-scroll my-auto justify-center justify-items-center p-2 bg-slate-800 text-white text-xs font-bold font-mono md:grid-cols-2 lg:grid-cols-3 sm:h-48 sm:overflow-y-scroll sm:grid-cols-2 w-3/4 border border-x">
         {error ? (
           <>Oh no, there was an error</>
         ) : isLoading ? (
@@ -66,15 +66,15 @@ export function QueryGames() {
           </>
         ) : null}
       </div>
-      <div className="flex flex-col  px-2 justify-center items-center text-center  text-white bg-slate-900 md:flex-row ">
+      <div className="flex flex-col w-3/4  px-2 justify-center items-center text-center  text-white bg-slate-900 md:flex-row ">
         <button
           onClick={() => setCurrentPage((previousValue) => previousValue - 1)}
           className="hover:bg-black w-52 h-16"
           disabled={currentPage <= 1}
         >
-          Back
+          Previous
         </button>
-        <span className="">{currentPage}</span>
+        <span className="mx-10">{currentPage}</span>
         <button
           onClick={() => setCurrentPage((previousValue) => previousValue + 1)}
           className=" hover:bg-black w-52 h-16"
