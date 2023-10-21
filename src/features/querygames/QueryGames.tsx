@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 import { useAppSelector, useAppDispatch } from "../../app/hooks"
-import { useQuery } from "react-query"
+import { useQuery, useQueryClient } from "react-query"
 
 //useEffect(() => {
 //  function handleResize() {
@@ -23,11 +23,21 @@ const fetchGames = async (pageNum: number) => {
 export function QueryGames() {
   const [currentPage, setCurrentPage] = useState(1)
 
+  const queryClient = useQueryClient()
+
+  useEffect(() => {
+    const nextPage = currentPage + 1
+    queryClient.prefetchQuery(["Games", nextPage], () =>
+      fetchGames(currentPage),
+    )
+  }, [currentPage, queryClient])
+
   const { isLoading, error, data } = useQuery(
     ["Games", currentPage],
     () => fetchGames(currentPage),
     {
       staleTime: 200,
+      keepPreviousData: true,
     },
   )
 
@@ -56,18 +66,18 @@ export function QueryGames() {
           </>
         ) : null}
       </div>
-      <div className="flex flex-col justify-between px-6 text-white bg-slate-900 md:flex-row">
+      <div className="flex flex-col  px-2 justify-center items-center text-center  text-white bg-slate-900 md:flex-row ">
         <button
           onClick={() => setCurrentPage((previousValue) => previousValue - 1)}
-          className="hover:bg-black w-[50%]"
+          className="hover:bg-black w-52 h-16"
           disabled={currentPage <= 1}
         >
-          Previous
+          Back
         </button>
-        <span>{currentPage}</span>
+        <span className="">{currentPage}</span>
         <button
           onClick={() => setCurrentPage((previousValue) => previousValue + 1)}
-          className=" hover:bg-black w-[50%]"
+          className=" hover:bg-black w-52 h-16"
         >
           Next
         </button>

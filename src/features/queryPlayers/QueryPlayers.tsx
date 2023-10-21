@@ -13,7 +13,7 @@ function QueryPlayers() {
 
   return (
     <>
-      <div className="grid grid-cols-3 auto-cols-max bg-white font-bold font-mono">
+      <div className="grid grid-cols-3 auto-cols-max p-4 bg-white font-bold font-mono">
         {error ? (
           <>Oh no, there was an error</>
         ) : isLoading ? (

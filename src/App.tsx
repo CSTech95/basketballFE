@@ -41,7 +41,7 @@ function App() {
         <Navbar />
         <div className="mb-auto">
           <StatSlideshow />
-          <div className="grid grid-cols-2 grid-gap-4 border border-black">
+          <div className="grid grid-cols-1 grid-gap-4 border border-black md:grid-cols-2">
             <QueryPlayers />
             <QueryGames />
           </div>
