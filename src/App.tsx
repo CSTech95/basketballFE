@@ -49,7 +49,7 @@ function App() {
             <QueryPlayers />
             <QueryGames />
           </div>
-          <div className="h-[1196px] bg-green">
+          <div className="h-[1196px] bg-stone-950">
             <MyComponent />
           </div>
         </div>
