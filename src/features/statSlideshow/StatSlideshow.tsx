@@ -24,7 +24,7 @@ export function StatSlideshow() {
   }, [])
 
   return (
-    <div className="flex flex-row h-44 shadow-xl bg-gradient-to-r from-blue-800 to-blue-400 overflow-x-scroll p-1">
+    <div className="flex flex-row h-44 shadow-xl bg-gradient-to-r from-zinc-800 to-zinc-700 overflow-x-scroll p-1">
       {error ? (
         <>Oh no, there was an error</>
       ) : isLoading ? (

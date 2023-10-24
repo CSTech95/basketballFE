@@ -42,9 +42,9 @@ function App() {
     <div className="flex flex-col">
       <QueryClientProvider client={queryClient}>
         <Navbar />
-        <StatSlideshow />
-        <Cover />
         <div className="mb-auto">
+          <StatSlideshow />
+          <Cover />
           <div className="grid grid-cols-1 grid-gap-4 border border-black md:grid-cols-2">
             <QueryPlayers />
             <QueryGames />
