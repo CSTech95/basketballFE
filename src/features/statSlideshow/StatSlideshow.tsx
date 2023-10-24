@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { useAppSelector, useAppDispatch } from "../../app/hooks"
 import { useGetAllGamesQuery } from "../counter/nba-query"
 import StatFeature from "./StatFeature"
+import { Game } from "../../types/game"
 
 export function StatSlideshow() {
   const { data, error, isLoading } = useGetAllGamesQuery("")
@@ -23,7 +24,7 @@ export function StatSlideshow() {
   }, [])
 
   return (
-    <div className="flex flex-row  shadow-xl bg-gradient-to-r from-sky-100 to-cyan-50 overflow-x-scroll p-4">
+    <div className="flex flex-row h-44 shadow-xl bg-gradient-to-r from-blue-800 to-blue-400 overflow-x-scroll p-1">
       {error ? (
         <>Oh no, there was an error</>
       ) : isLoading ? (
@@ -31,7 +32,7 @@ export function StatSlideshow() {
       ) : data ? (
         <>
           {/*{console.log(data.data[0].first_name)}*/}
-          {data.data.map(function (game: any) {
+          {data.data.map(function (game: Game) {
             console.log(game)
             //return <h1>{`${players.first_name},${players.last_name} `}</h1>
             return <StatFeature game={game} />

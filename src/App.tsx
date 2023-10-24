@@ -10,6 +10,9 @@ import { QueryGames } from "./features/querygames/QueryGames"
 import { Footer } from "./features/footer/Footer"
 import StatFeatures from "./features/statSlideshow/StatFeatures"
 import StatFeature from "./features/statSlideshow/StatFeature"
+import MyComponent from "./features/samples/MyComponent"
+import Cover from "./features/cover/Cover"
+//import { MyComponent } from "./features/samples/MyComponent"
 const queryClient = new QueryClient()
 
 function App() {
@@ -39,13 +42,16 @@ function App() {
     <div className="flex flex-col">
       <QueryClientProvider client={queryClient}>
         <Navbar />
+        <StatSlideshow />
+        <Cover />
         <div className="mb-auto">
-          <StatSlideshow />
           <div className="grid grid-cols-1 grid-gap-4 border border-black md:grid-cols-2">
             <QueryPlayers />
             <QueryGames />
           </div>
-          <div className="h-[1196px] bg-green"></div>
+          <div className="h-[1196px] bg-green">
+            <MyComponent />
+          </div>
         </div>
         <Footer />
       </QueryClientProvider>
