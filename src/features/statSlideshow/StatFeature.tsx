@@ -11,7 +11,7 @@ const StatFeature = ({ game }: Props) => {
   let theDate = moment(game.date).format("MMMM Do YYYY, h:mm:ss a")
   //  theDate = theDate.toISOString()
   return (
-    <div className="grid p-2 border rounded bg-black text-white border-black text-xs  font-mono subpixel-antialiased text-center m-1">
+    <div className="grid p-2 border rounded bg-stone-950 text-white border-black text-xs  font-mono subpixel-antialiased text-center m-1">
       <h3 className="">{theDate}</h3>
       <div className="flex flex-row gap-4 w-44 pt-4 ">
         <div className="">
