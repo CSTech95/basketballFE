@@ -24,13 +24,13 @@ export function StatSlideshow() {
   }, [])
 
   return (
-    <div className="flex flex-row h-44 shadow-xl bg-gradient-to-r from-zinc-800 to-zinc-700 overflow-x-scroll p-1">
+    <div className="shadow-xl bg-gradient-to-r from-zinc-800 to-zinc-700  p-1">
       {error ? (
         <>Oh no, there was an error</>
       ) : isLoading ? (
         <>Loading...</>
       ) : data ? (
-        <>
+        <div className="h-48 flex overflow-x-scroll">
           {/*{console.log(data.data[0].first_name)}*/}
           {data.data.map(function (game: Game) {
             console.log(game)
@@ -40,9 +40,8 @@ export function StatSlideshow() {
           {/*<h3>{data.data[0].first_name}</h3>*/}
           {/*{console.log(data.data[0].first_name)}*/}
           {/*<img src={data.sprites.front_shiny} alt={data.species.name} />*/}
-        </>
+        </div>
       ) : null}
-      <div className=" "></div>
     </div>
   )
 }

@@ -7,20 +7,33 @@ interface Props {
 }
 
 const StatFeature = ({ game }: Props) => {
-  console.log(game)
+  const homeScore = game.home_team_score
+  const visitorScore = game.visitor_team_score
+  //  console.log(game)
   let theDate = moment(game.date).format("MMMM Do YYYY, h:mm:ss a")
   //  theDate = theDate.toISOString()
+
   return (
-    <div className="grid p-2 border rounded bg-stone-950 text-white border-black text-xs  font-mono subpixel-antialiased text-center m-1">
-      <h3 className="">{theDate}</h3>
-      <div className="flex flex-row gap-4 w-44 pt-4 ">
-        <div className="">
-          <div className="">{game.home_team.full_name}</div>
-          <div className="">{game.home_team_score}</div>
+    <div className="flex flex-col border rounded bg-stone-950 text-white border-black  font-mono subpixel-antialiased text-center m-1">
+      <p className="mb-auto">{theDate}</p>
+      <div className="w-80 flex flex-row justify-center justify-between p-2">
+        <div className="flex flex-col">
+          <p className="">{game.home_team.full_name}</p>
+          {homeScore > visitorScore ? (
+            <p className="text-green">{game.home_team_score}</p>
+          ) : (
+            <p className="text-red-500">{game.home_team_score}</p>
+          )}
         </div>
-        <div>
-          <div className="">{game.visitor_team.full_name}</div>
-          <div className="">{game.visitor_team_score}</div>
+        <span>VS</span>
+        <div className="flex flex-col">
+          <p className="">{game.visitor_team.full_name}</p>
+          {/*<p className="">{game.visitor_team_score}</p>*/}
+          {homeScore < visitorScore ? (
+            <p className="text-green">{game.visitor_team_score}</p>
+          ) : (
+            <p className="text-red-500">{game.visitor_team_score}</p>
+          )}
         </div>
       </div>
     </div>
