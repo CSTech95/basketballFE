@@ -10,7 +10,7 @@ const Cover = () => {
   })
   return (
     <div className="h-[500px] bg-cover bg-local bg-[url('../../../public/ball-cover-1.jpg')]">
-      <span className="bg-clip-text text-5xl font-extrabold text-transparent bg-gradient-to-r from-amber-700 to-orange-700">
+      <span className="bg-clip-text text-5xl ml-2 font-extrabold text-transparent bg-gradient-to-r from-amber-700 to-orange-700">
         NBA
       </span>
       <div className="invisible flex flex-row justify-end md:visible">
