@@ -15,7 +15,7 @@ const StatFeature = ({ game }: Props) => {
 
   return (
     <div className="flex flex-col border rounded bg-stone-950 text-white border-black  font-mono subpixel-antialiased text-center m-1">
-      <p className="mb-auto">{theDate}</p>
+      <p className="pt-2 mb-auto">{theDate}</p>
       <div className="w-80 flex flex-row justify-center justify-between p-2">
         <div className="flex flex-col">
           <p className="">{game.home_team.full_name}</p>
