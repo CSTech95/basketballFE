@@ -46,8 +46,8 @@ export function QueryGames() {
   if (error) return "An error has occurred: " + error
 
   return (
-    <div className="flex flex-col items-center my-4">
-      <div className="grid grid-cols-1 h-80 overflow-y-scroll my-auto justify-center justify-items-center p-2 bg-slate-800 text-white text-xs font-bold font-mono md:grid-cols-2 lg:grid-cols-3 sm:h-48 sm:overflow-y-scroll sm:grid-cols-2 w-3/4 border border-x">
+    <div className="h-screen flex flex-col items-center my-4">
+      <div className="grid grid-cols-1 h-64 overflow-y-scroll  justify-center justify-items-center mb-1 p-2 bg-slate-800 text-center text-white text-xs font-bold font-mono md:grid-cols-2 lg:grid-cols-3 sm:h-96 sm:overflow-y-scroll sm:grid-cols-2 w-3/4 border border-x border-black">
         {error ? (
           <>Oh no, there was an error</>
         ) : isLoading ? (

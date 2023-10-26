@@ -1,62 +1,63 @@
-import logo from "./logo.svg"
-import { Counter } from "./features/counter/Counter"
 import "./App.css"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import { Navbar } from "./features/navbar/Navbar"
 import { QueryClient, QueryClientProvider } from "react-query"
 import { StatSlideshow } from "./features/statSlideshow/StatSlideshow"
-import { useGetAllPlayersQuery } from "./features/counter/nba-query"
 import QueryPlayers from "./features/queryPlayers/QueryPlayers"
 import { QueryGames } from "./features/querygames/QueryGames"
 import { Footer } from "./features/footer/Footer"
-import StatFeatures from "./features/statSlideshow/StatFeatures"
-import StatFeature from "./features/statSlideshow/StatFeature"
 import MyComponent from "./features/samples/MyComponent"
 import Cover from "./features/cover/Cover"
-//import { MyComponent } from "./features/samples/MyComponent"
-const queryClient = new QueryClient()
+import Home from "./features/home/Home"
+//const queryClient = new QueryClient()
+
+//const router = createBrowserRouter([
+//  {
+//    path: "/",
+//    element: <Home />,
+//  },
+//  {
+//    path: "/about",
+//    element: <h1>About</h1>,
+//  },
+//  {
+//    path: "/players",
+//    element: <QueryPlayers />,
+//  },
+//  {
+//    path: "/games",
+//    element: <QueryGames />,
+//  },
+//])
 
 function App() {
-  const API_URL = "http://localhost:8080/api/fetch?mobileNumber=1234567890"
-
-  //  const API_URL = "https://rickandmortyapi.com/api/character"
-  const { data, error, isLoading } = useGetAllPlayersQuery("")
-
-  //  const helper: any = async () => {
-  //    try {
-  //      const res = await fetch(API_URL, {
-  //        method: "GET",
-  //        headers: {
-  //          "Content-Type": "application/json",
-  //        },
-  //      })
-  //        .then((response) => response.json())
-  //        .then((data: any) => {
-  //          console.log(data)
-  //        })
-  //    } catch (error) {
-  //      console.log(error)
-  //    }
-  //  }
-
   return (
-    <div className="flex flex-col">
-      <QueryClientProvider client={queryClient}>
-        <Navbar />
-        <div className="mb-auto">
-          <StatSlideshow />
-          <Cover />
-          <div className="grid grid-cols-1 grid-gap-4 border border-black md:grid-cols-2">
-            <QueryPlayers />
-            <QueryGames />
-          </div>
-          <div className="h-[1196px] bg-stone-950">
-            <MyComponent />
-          </div>
-        </div>
-        <Footer />
-      </QueryClientProvider>
+    <div className="flex flex-col h-screen">
+      <Navbar />
+      <div className="mb-auto"></div>
+      <Footer />
     </div>
   )
 }
 
 export default App
+
+//  <RouterProvider router={router}>
+//      <div className="flex flex-col">
+//        <QueryClientProvider client={queryClient}>
+//          <Navbar />
+//          <div className="mb-auto">
+//            <StatSlideshow />
+//            <Cover />
+//            <div className="grid grid-cols-1 grid-gap-4 border border-black md:grid-cols-2">
+//              <QueryPlayers />
+//              <QueryGames />
+//            </div>
+//            <div className="h-[1196px] bg-stone-950">
+//              <MyComponent />
+//            </div>
+//          </div>
+//          <Footer />
+//        </QueryClientProvider>
+//      </div>
+//    </RouterProvider>

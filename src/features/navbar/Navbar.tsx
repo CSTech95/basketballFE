@@ -1,34 +1,20 @@
-import { useState } from "react"
-
-import { useAppSelector, useAppDispatch } from "../../app/hooks"
-//import {
-//  decrement,
-//  increment,
-//  incrementByAmount,
-//  incrementAsync,
-//  incrementIfOdd,
-//  selectCount,
-//} from "./counterSlice"
-//import styles from "./Counter.module.css"
+import { Link, NavLink } from "react-router-dom"
 
 export function Navbar() {
-  //  const count = useAppSelector(selectCount)
-  const dispatch = useAppDispatch()
-  const [incrementAmount, setIncrementAmount] = useState("2")
-
-  const incrementValue = Number(incrementAmount) || 0
-
   return (
-    <div className="flex flex-row justify-between h-[55px] px-4 bg-zinc-950  w-full md:w-auto">
+    <nav className="flex flex-row justify-between h-[55px] px-4 bg-zinc-950  w-full md:w-auto">
       <div className="flex align-center items-center">
         <img
           src="https://cdn.nba.com/logos/leagues/logo-nba.svg"
           className="flex h-[30px]"
         />
       </div>
+
       <div className=" text-white items-center flex order-last">
-        <button className="order-last">Sign In</button>
+        {/*<button className="order-last">Sign In</button>*/}
+        <NavLink to="/games">Games</NavLink>
+        <NavLink to="/players">Players</NavLink>
       </div>
-    </div>
+    </nav>
   )
 }

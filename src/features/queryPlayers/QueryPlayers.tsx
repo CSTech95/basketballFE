@@ -25,8 +25,8 @@ function QueryPlayers() {
   if (error) return "An error has occurred: " + error
 
   return (
-    <div className="flex flex-col items-center my-4">
-      <div className="grid grid-cols-1 h-80 overflow-y-scroll my-auto justify-center justify-items-center p-2 bg-white text-xs font-bold font-mono md:grid-cols-2 lg:grid-cols-3 sm:h-48 sm:overflow-y-scroll sm:grid-cols-2 w-3/4 border border-x">
+    <div className="flex flex-col h-screen items-center my-4">
+      <div className="grid grid-cols-1 h-64 overflow-y-scroll  justify-center justify-items-center mb-1 p-2 bg-white text-xs font-bold font-mono md:grid-cols-2 lg:grid-cols-3 sm:h-96 sm:overflow-y-scroll sm:grid-cols-2 w-3/4 border border-x border-black">
         {error ? (
           <>Oh no, there was an error</>
         ) : isLoading ? (
@@ -41,7 +41,7 @@ function QueryPlayers() {
           </>
         ) : null}
       </div>
-      <div className="flex flex-col w-3/4 mt-2 px-2 justify-center items-center text-center  text-black bg-gray-400 md:flex-row ">
+      <div className="flex flex-col w-3/4  px-2 justify-center items-center text-center  text-black bg-gray-400 md:flex-row ">
         <button
           onClick={() => setCurrentPage((previousValue) => previousValue - 1)}
           className="hover:bg-slate-700 w-52 h-16"
