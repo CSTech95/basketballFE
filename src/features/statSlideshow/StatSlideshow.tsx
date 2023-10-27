@@ -24,7 +24,7 @@ export function StatSlideshow() {
   }, [])
 
   return (
-    <div className="shadow-xl bg-gradient-to-r from-zinc-800 to-zinc-700  p-1 pr-0">
+    <div className="shadow-xl   p-1 pr-0">
       {error ? (
         <>Oh no, there was an error</>
       ) : isLoading ? (
