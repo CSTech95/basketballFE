@@ -15,8 +15,8 @@ export function Navbar() {
       <div className=" text-white items-center flex order-last space-x-7">
         {/*<button className="order-last">Sign In</button>*/}
         {/*<NavLink to="/teams">Teams</NavLink>*/}
-        <NavLink to="/players">Players</NavLink>
-        <NavLink to="/games">Games</NavLink>
+        <NavLink to="/basketballFE/players">Players</NavLink>
+        <NavLink to="/basketballFE/games">Games</NavLink>
         {/*<NavLink to="/stats">Stats</NavLink>*/}
       </div>
     </nav>
