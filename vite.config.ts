@@ -11,7 +11,7 @@ export default defineConfig({
     outDir: "dist",
     sourcemap: true,
   },
-  base: "/",
+  base: "/CSTech95/basketballFE/",
   test: {
     globals: true,
     environment: "jsdom",
