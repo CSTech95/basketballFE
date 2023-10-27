@@ -1,4 +1,3 @@
-import "./App.css"
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom"
 import { Navbar } from "./features/navbar/Navbar"
 import { QueryClient, QueryClientProvider } from "react-query"
