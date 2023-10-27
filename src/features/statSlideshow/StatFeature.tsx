@@ -14,25 +14,27 @@ const StatFeature = ({ game }: Props) => {
   //  theDate = theDate.toISOString()
 
   return (
-    <div className="flex flex-col border rounded bg-stone-950 text-white border-black  font-mono subpixel-antialiased text-center m-1">
+    <div className="flex flex-col border rounded bg-stone-950 text-white border-black leading-loose font-mono subpixel-antialiased text-center m-1 hover:40 hover:bg-zinc-700">
       <p className="pt-2 mb-auto">{theDate}</p>
-      <div className="w-80 flex flex-row justify-center justify-between p-2">
-        <div className="flex flex-col">
-          <p className="">{game.home_team.full_name}</p>
+      <div className="w-80 flex flex-row justify-center  p-2 align-center space-x-2">
+        <div className="flex flex-col w-full text-center flex-wrap ">
+          <p className="text-sm tracking-wide  ">{game.home_team.full_name}</p>
           {homeScore > visitorScore ? (
-            <p className="text-green">{game.home_team_score}</p>
+            <p className="text-green ">{game.home_team_score}</p>
           ) : (
-            <p className="text-red-500">{game.home_team_score}</p>
+            <p className="text-red-500 text-base/7">{game.home_team_score}</p>
           )}
         </div>
-        <span>VS</span>
-        <div className="flex flex-col">
-          <p className="">{game.visitor_team.full_name}</p>
+        {/*<span className="text-xl text-base/7">VS</span>*/}
+        <div className="flex flex-col w-full text-center">
+          <p className="text-sm tracking-wide  ">
+            {game.visitor_team.full_name}
+          </p>
           {/*<p className="">{game.visitor_team_score}</p>*/}
           {homeScore < visitorScore ? (
-            <p className="text-green">{game.visitor_team_score}</p>
+            <p className="text-green  ">{game.visitor_team_score}</p>
           ) : (
-            <p className="text-red-500">{game.visitor_team_score}</p>
+            <p className="text-red-500  ">{game.visitor_team_score}</p>
           )}
         </div>
       </div>

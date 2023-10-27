@@ -1,6 +1,8 @@
 import React from "react"
 import { useSpring, animated } from "@react-spring/web"
 
+import coverImg from "../../images/ball-cover-1.jpg"
+
 const Cover = () => {
   const springs = useSpring({
     from: { y: 100, x: 0, opacity: 0 },
@@ -9,7 +11,10 @@ const Cover = () => {
     //reverse: true,
   })
   return (
-    <div className="h-[500px] bg-cover bg-local bg-[url('../../../public/ball-cover-1.jpg')]">
+    <div
+      style={{ backgroundImage: `url(${coverImg})` }}
+      className="h-[500px] bg-cover bg-local bg-[url(`../../images/ball-cover-1.jpg`)]"
+    >
       <span className="bg-clip-text text-5xl ml-2 font-extrabold text-transparent bg-gradient-to-r from-amber-700 to-orange-700">
         NBA
       </span>

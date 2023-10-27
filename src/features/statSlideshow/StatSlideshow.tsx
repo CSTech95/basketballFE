@@ -30,7 +30,7 @@ export function StatSlideshow() {
       ) : isLoading ? (
         <>Loading...</>
       ) : data ? (
-        <div className="h-48 flex overflow-x-scroll">
+        <div className=" h-40 md:h-48 md:pb-0 flex overflow-x-scroll">
           {/*{console.log(data.data[0].first_name)}*/}
           {data.data.map(function (game: Game) {
             console.log(game)
