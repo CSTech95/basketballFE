@@ -1,5 +1,5 @@
 import "./App.css"
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom"
 import { Navbar } from "./features/navbar/Navbar"
 import { QueryClient, QueryClientProvider } from "react-query"
 import { StatSlideshow } from "./features/statSlideshow/StatSlideshow"
@@ -34,7 +34,18 @@ function App() {
   return (
     <div className="flex flex-col h-screen">
       <Navbar />
-      <div className="mb-auto"></div>
+      {/*<StatSlideshow />
+      <Cover />
+      <div className="grid grid-cols-1 grid-gap-4 border border-black md:grid-cols-2">
+        <QueryPlayers />
+        <QueryGames />
+      </div>
+      <div className="h-[1196px] bg-stone-950">
+        <MyComponent />
+      </div>*/}
+      <div className="mb-auto">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   )

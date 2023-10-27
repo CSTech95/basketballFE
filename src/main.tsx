@@ -12,11 +12,12 @@ import { Navbar } from "./features/navbar/Navbar"
 import { StatSlideshow } from "./features/statSlideshow/StatSlideshow"
 import Cover from "./features/cover/Cover"
 import MyComponent from "./features/samples/MyComponent"
+import App from "./App"
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <App />,
     children: [
       {
         path: "/",
