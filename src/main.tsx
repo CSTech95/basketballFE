@@ -8,11 +8,10 @@ import Home from "./features/home/Home"
 import QueryPlayers from "./features/queryPlayers/QueryPlayers"
 import { QueryGames } from "./features/querygames/QueryGames"
 import { QueryClient, QueryClientProvider } from "react-query"
-import MyComponent from "./features/samples/MyComponent"
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/basketballFE",
     element: <Home />,
     children: [
       {
@@ -35,6 +34,10 @@ const queryClient = new QueryClient()
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <MyComponent />
+    <QueryClientProvider client={queryClient}>
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>
+    </QueryClientProvider>
   </React.StrictMode>,
 )
