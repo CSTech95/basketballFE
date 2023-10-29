@@ -14,7 +14,7 @@ const StatFeature = ({ game }: Props) => {
   //  theDate = theDate.toISOString()
 
   return (
-    <div className="flex flex-col rounded-t-lg bg-zinc-950 text-white border-black leading-loose font-mono subpixel-antialiased text-center m-1 hover:40 hover:bg-zinc-700">
+    <div className="flex flex-col rounded-t-lg bg-slate-900 text-white border-black leading-loose font-mono subpixel-antialiased text-center m-1 hover:40 hover:bg-zinc-700">
       <p className="pt-2 mb-auto">{theDate}</p>
       <div className="w-80 flex flex-row justify-center  p-2 align-center space-x-2">
         <div className="flex flex-col w-full text-center flex-wrap ">

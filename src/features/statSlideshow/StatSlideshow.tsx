@@ -35,7 +35,7 @@ export function StatSlideshow() {
           {data.data.map(function (game: Game) {
             console.log(game)
             //return <h1>{`${players.first_name},${players.last_name} `}</h1>
-            return <StatFeature game={game} />
+            return <StatFeature key={game.id} game={game} />
           })}
           {/*<h3>{data.data[0].first_name}</h3>*/}
           {/*{console.log(data.data[0].first_name)}*/}
