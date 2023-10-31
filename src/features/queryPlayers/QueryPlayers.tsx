@@ -56,7 +56,7 @@ function QueryPlayers() {
           </tbody>
         </table>
       </div>
-      <div className="w-[90%] flex flex-col  px-2 justify-center items-center text-center  text-black bg-gray-400 md:flex-row ">
+      <div className="w-[90%] flex flex-row  px-2 justify-center items-center text-center  text-black bg-gray-400 md:flex-row ">
         <button
           onClick={() => setCurrentPage((previousValue) => previousValue - 1)}
           className="hover:bg-slate-700 w-52 h-16"
