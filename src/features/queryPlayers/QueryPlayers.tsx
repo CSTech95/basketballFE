@@ -30,13 +30,17 @@ function QueryPlayers() {
         {error ? (
           <>Oh no, there was an error</>
         ) : isLoading ? (
-          <>Loading...</>
+          <div className="animate-spin h-5 w-5 mr-3" />
         ) : data ? (
           <>
             {/*{console.log(data.data[0].first_name)}*/}
             {data.data.map(function (player: any) {
-              //  console.log(player)
-              return <h1>{`${player.first_name},${player.last_name} `}</h1>
+              console.log(player)
+              return (
+                <h1
+                  key={player.id}
+                >{`${player.first_name},${player.last_name} `}</h1>
+              )
             })}
           </>
         ) : null}
