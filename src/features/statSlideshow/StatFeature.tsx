@@ -1,12 +1,12 @@
 import React from "react"
 import moment from "moment"
-import { Game } from "/Users/aser/Documents/tech/portfolio/nodejs/basketball/src/types/Game"
+//import { Game } from "../../types/game"
 
-interface Props {
-  game: Game
-}
+//interface Props {
+//  game: Game
+//}
 
-const StatFeature = ({ game }: Props) => {
+const StatFeature = ({ game }: any) => {
   const homeScore = game.home_team_score
   const visitorScore = game.visitor_team_score
   //  console.log(game)
