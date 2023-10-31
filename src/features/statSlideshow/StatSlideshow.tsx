@@ -43,7 +43,7 @@ export function StatSlideshow() {
         <>Loading...</>
       ) : data ? (
         <div className=" h-40 md:h-48 md:pb-0 flex overflow-x-scroll">
-          {data.data.map(function (game: Game) {
+          {data.data.map(function (game: any) {
             console.log(game)
             return <StatFeature key={game.id} game={game} />
           })}

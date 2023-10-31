@@ -47,7 +47,7 @@ export function QueryGames() {
         ) : data ? (
           <>
             {/*{console.log(data.data[0].first_name)}*/}
-            {data.data.map(function (game: Game) {
+            {data.data.map(function (game: any) {
               console.log(game)
               //return <h1>{`${players.first_name},${players.last_name} `}</h1>
               return <h1 key={game.id}>{game.home_team.full_name}</h1>
