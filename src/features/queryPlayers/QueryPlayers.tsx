@@ -47,16 +47,9 @@ function QueryPlayers() {
               <>Loading...</>
             ) : data ? (
               <>
-                {/*{console.log(data.data[0].first_name)}*/}
-                {data.data.map(function (player: any) {
+                {data.data.map(function (player: Player) {
                   console.log(player)
-                  return (
-                    //<h1
-                    //  key={player.id}
-                    //>{`${player.first_name},${player.last_name} `}</h1>
-
-                    <PlayerTableDetails player={player} />
-                  )
+                  return <PlayerTableDetails player={player} />
                 })}
               </>
             ) : null}
