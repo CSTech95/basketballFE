@@ -27,8 +27,8 @@ function QueryPlayers() {
   if (error) return "An error has occurred: " + error
 
   return (
-    <div className="flex flex-col items-center ">
-      <div className="flex justify-center items-center m-1 sm:m-4 md:m-8">
+    <div className="flex flex-col items-center w-screen">
+      <div className="flex justify-center items-center w-[90%] m-1 sm:m-4 md:m-2">
         <table className="text-center w-full table-auto ">
           <thead>
             <tr className="text-xs sm:text-sm md:text-base lg:text-lg">
@@ -56,7 +56,7 @@ function QueryPlayers() {
           </tbody>
         </table>
       </div>
-      <div className="w-full flex flex-col   px-2 justify-center items-center text-center  text-black bg-gray-400 md:flex-row ">
+      <div className="w-[90%] flex flex-col  px-2 justify-center items-center text-center  text-black bg-gray-400 md:flex-row ">
         <button
           onClick={() => setCurrentPage((previousValue) => previousValue - 1)}
           className="hover:bg-slate-700 w-52 h-16"
