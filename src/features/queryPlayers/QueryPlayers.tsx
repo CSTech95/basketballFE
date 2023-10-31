@@ -34,8 +34,8 @@ function QueryPlayers() {
             <tr className="text-xs sm:text-sm md:text-base lg:text-lg">
               <th>First Name</th>
               <th>Last Name</th>
-              <th>Height (ft)</th>
-              <th>Weight (lbs)</th>
+              <th className="collapse sm:visible">Height (ft)</th>
+              <th className="collapse sm:visible">Weight (lbs)</th>
               <th>Position</th>
               <th>Team</th>
             </tr>
