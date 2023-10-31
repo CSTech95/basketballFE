@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
-import { useAppSelector, useAppDispatch } from "../../app/hooks"
 import { useQuery, useQueryClient } from "react-query"
+import { Game } from "../../types/Game"
 
 //const maxGamesPerPage = 10
 
@@ -47,7 +47,7 @@ export function QueryGames() {
         ) : data ? (
           <>
             {/*{console.log(data.data[0].first_name)}*/}
-            {data.data.map(function (game: any) {
+            {data.data.map(function (game: Game) {
               console.log(game)
               //return <h1>{`${players.first_name},${players.last_name} `}</h1>
               return <h1 key={game.id}>{game.home_team.full_name}</h1>

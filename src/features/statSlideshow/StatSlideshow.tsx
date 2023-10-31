@@ -1,21 +1,39 @@
 import { useEffect } from "react"
 
-import { useGetAllGamesQuery } from "../counter/nba-query"
 import StatFeature from "./StatFeature"
 import { Game } from "../../types/Game"
+import { useQuery, useQueryClient } from "react-query"
+
+const fetchGames = async () => {
+  const response = await fetch(`https://www.balldontlie.io/api/v1/games`)
+  return response.json()
+}
 
 export function StatSlideshow() {
-  const { data, error, isLoading } = useGetAllGamesQuery("")
+  const queryClient = useQueryClient()
 
   useEffect(() => {
-    function handleResize() {
-      console.log(
-        `Resized to ${window.innerWidth}, X & ${window.innerHeight}, Y`,
-      )
-    }
+    queryClient.prefetchQuery("Games", () => fetchGames())
+  }, [queryClient])
 
-    window.addEventListener("resize", handleResize)
-  }, [])
+  const { isLoading, error, data } = useQuery(["Games"], () => fetchGames(), {
+    staleTime: 200,
+    keepPreviousData: true,
+  })
+
+  //const [games, setGames] = useState(initialState)
+
+  //  const { data, error, isLoading } = useGetAllGamesQuery(" ")
+
+  //  useEffect(() => {
+  //    function handleResize() {
+  //      console.log(
+  //        `Resized to ${window.innerWidth}, X & ${window.innerHeight}, Y`,
+  //      )
+  //    }
+
+  //    window.addEventListener("resize", handleResize)
+  //  }, [])
 
   return (
     <div className="shadow-xl p-1 pr-0">

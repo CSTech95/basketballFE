@@ -1,4 +1,4 @@
-export interface Game {
+export type Game = {
   id: number
   date: string
   home_team_score: number
