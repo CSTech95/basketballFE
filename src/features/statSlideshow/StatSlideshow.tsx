@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { useAppSelector, useAppDispatch } from "../../app/hooks"
 import { useGetAllGamesQuery } from "../counter/nba-query"
 import StatFeature from "./StatFeature"
-import { Game } from "../../types/game"
+import { Game } from "../../types/Game"
 
 export function StatSlideshow() {
   const { data, error, isLoading } = useGetAllGamesQuery("")

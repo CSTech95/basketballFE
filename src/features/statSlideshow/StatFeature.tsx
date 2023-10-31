@@ -1,6 +1,6 @@
 import React from "react"
 import moment from "moment"
-import { Game } from "../../types/game"
+import { Game } from "../../types/Game"
 
 interface Props {
   game: Game
