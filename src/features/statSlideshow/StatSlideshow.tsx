@@ -7,11 +7,6 @@ import { Game } from "../../types/Game"
 
 export function StatSlideshow() {
   const { data, error, isLoading } = useGetAllGamesQuery("")
-  //  const count = useAppSelector(selectCount)
-  const dispatch = useAppDispatch()
-  //  const [incrementAmount, setIncrementAmount] = useState("2")
-
-  //  const incrementValue = Number(incrementAmount) || 0
 
   useEffect(() => {
     function handleResize() {
@@ -34,12 +29,8 @@ export function StatSlideshow() {
           {/*{console.log(data.data[0].first_name)}*/}
           {data.data.map(function (game: Game) {
             console.log(game)
-            //return <h1>{`${players.first_name},${players.last_name} `}</h1>
             return <StatFeature key={game.id} game={game} />
           })}
-          {/*<h3>{data.data[0].first_name}</h3>*/}
-          {/*{console.log(data.data[0].first_name)}*/}
-          {/*<img src={data.sprites.front_shiny} alt={data.species.name} />*/}
         </div>
       ) : null}
     </div>
