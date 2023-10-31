@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 
-import { useAppSelector, useAppDispatch } from "../../app/hooks"
 import { useGetAllGamesQuery } from "../counter/nba-query"
 import StatFeature from "./StatFeature"
 import { Game } from "../../types/Game"
@@ -19,14 +18,13 @@ export function StatSlideshow() {
   }, [])
 
   return (
-    <div className="shadow-xl   p-1 pr-0">
+    <div className="shadow-xl p-1 pr-0">
       {error ? (
         <>Oh no, there was an error</>
       ) : isLoading ? (
         <>Loading...</>
       ) : data ? (
         <div className=" h-40 md:h-48 md:pb-0 flex overflow-x-scroll">
-          {/*{console.log(data.data[0].first_name)}*/}
           {data.data.map(function (game: Game) {
             console.log(game)
             return <StatFeature key={game.id} game={game} />
