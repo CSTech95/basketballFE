@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 
 import StatFeature from "./StatFeature"
-import { Game } from "../../types/Game"
+//import { Game } from "../../types/Game"
 import { useQuery, useQueryClient } from "react-query"
 
 const fetchGames = async () => {

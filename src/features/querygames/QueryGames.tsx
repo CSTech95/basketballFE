@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 import { useQuery, useQueryClient } from "react-query"
-import { Game } from "../../types/Game"
+//import { Game } from "../../types/Game"
 
 //const maxGamesPerPage = 10
 
