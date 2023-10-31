@@ -2,7 +2,7 @@ import { useEffect } from "react"
 
 import { useGetAllGamesQuery } from "../counter/nba-query"
 import StatFeature from "./StatFeature"
-import { Game } from "../../types/Game"
+import { Game } from "/Users/aser/Documents/tech/portfolio/nodejs/basketball/src/types/Game"
 
 export function StatSlideshow() {
   const { data, error, isLoading } = useGetAllGamesQuery("")
