@@ -5,7 +5,7 @@ import burgerImg from "../../images/burger.svg"
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false)
   return (
-    <nav className="relative flex flex-col flex-wrap items-center justify-between px-4 py-3 bg-slate-900  rounded-b-2xl mb-3 sm:flex-col">
+    <nav className="relative flex flex-col flex-wrap items-center justify-between px-4 py-3 bg-slate-900 mb-3 sm:flex-col">
       <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
         <div className="text-sm font-bold leading-relaxed inline-block mr-2 py-2 whitespace-nowrap uppercase text-white">
           <NavLink to="/basketballFE/">
