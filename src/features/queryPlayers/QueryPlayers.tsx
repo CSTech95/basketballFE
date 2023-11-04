@@ -34,7 +34,7 @@ function QueryPlayers() {
   if (error) return "An error has occurred: " + error
 
   return (
-    <div className="flex flex-col items-center ">
+    <div className="flex flex-col items-center m-2">
       <div className="flex flex-row w-full mr-10 mb-4 justify-end">
         <input
           className="pl-2 border border-black"
@@ -43,7 +43,7 @@ function QueryPlayers() {
         />
       </div>
 
-      <div className="flex justify-center items-center w-[90%] m-1 sm:m-4 md:m-2 ">
+      <div className="flex justify-center items-center w-full m-1 sm:m-4 md:m-2 ">
         <table className="text-center w-full table-auto ">
           <thead>
             <tr className="text-xs sm:text-sm md:text-base lg:text-lg">
