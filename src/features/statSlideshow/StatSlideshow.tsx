@@ -40,7 +40,9 @@ export function StatSlideshow() {
       {error ? (
         <>Oh no, there was an error</>
       ) : isLoading ? (
-        <>Loading...</>
+        <div className=" h-40 md:h-48 md:pb-0 flex overflow-x-scroll">
+          Loading...
+        </div>
       ) : data ? (
         <div className=" h-40 md:h-48 md:pb-0 flex overflow-x-scroll">
           {data.data.map(function (game: any) {

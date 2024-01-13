@@ -28,8 +28,11 @@ const Cover = () => {
             ...springs,
           }}
         >
-          <div className="text-center text-white text-xl">
-            <p className="pt-4 px-4">Review the latest NBA Stats</p>
+          <div className="h-full grid content-start p-2 text-center text-white text-xl">
+            <p>
+              Be sure to allow notifications to follow up on the latest news on
+              the National Basketball Association
+            </p>
           </div>
         </animated.div>
       </div>
